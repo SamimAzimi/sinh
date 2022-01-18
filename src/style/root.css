@@ -27,6 +27,14 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+.commingSoon {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    font-size: xx-large;
+    color: red;
+}
+
 body {
     line-height: 1;
 }
