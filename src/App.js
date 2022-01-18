@@ -1,24 +1,32 @@
 import './style/root.css'
 import React from 'react'
-
-
-
-
+import Nav from './components/Navigation.js'
+import Header from './components/Header.js'
+import Footer from './components/Footer.js'
+import {
+  Routes,
+  Route
+} from "react-router-dom";
+import Home from './components/Home.js'
+import ContactUs from './components/contactus.js'
+import AboutUs from './components/AboutUs.js'
+import Services from './components/Services.js'
+import CustomerPortal from './components/CustomerPortal.js'
 
 function App() {
   return (
-    <div className="landing_page_container">
-      <h1>Mudassir Printing Press</h1>
-
-      <ul>
-        <li>Home</li>
-        <li>Services</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <li>Customer Portal</li>
-      </ul>
-
-    </div>
+    <>
+      <Header />
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="contactus" element={<ContactUs />} />
+        <Route path="aboutus" element={<AboutUs />} />
+        <Route path="services" element={<Services />} />
+        <Route path="customerportal" element={<CustomerPortal />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
