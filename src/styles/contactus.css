@@ -36,3 +36,36 @@
 .forms {
     grid-area: forms;
 }
+
+@media screen and (max-width: 573px) {
+    .map {
+        grid-area: unset;
+        width: 100%;
+
+    }
+
+    .forms {
+        grid-area: unset;
+
+        order: 1;
+    }
+
+    .contactusinfo {
+        width: 100%;
+    }
+
+    .contactusinfo {
+        grid-column-start: 1;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+
+        font-size: small;
+        text-align: center;
+
+    }
+}

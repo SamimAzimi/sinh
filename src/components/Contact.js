@@ -10,12 +10,13 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 function Contact() {
 
     const [viewport, setViewport] = useState({
-        width: 700,
-        height: 500,
+        width: window.innerWidth / 2,
+        height: window.innerHeight / 2,
         latitude: 44.0,
         longitude: -79.0,
         zoom: 7,
     });
+
 
     function handleSocialMediaClick(link) {
         window.open(link, "_blank");
@@ -44,6 +45,8 @@ function Contact() {
     return (
         <>
             <div className="contactSection">
+
+                <Forms />
                 <div className="map">
                     <ReactMapGL
                         {...viewport}
@@ -53,7 +56,6 @@ function Contact() {
                             "pk.eyJ1IjoiaXRzc2N0byIsImEiOiJja3AyZXF3YzkweDV6MnZ0ZWlybDltZjhhIn0.Q6-NrYiizpfKP11JRtMbrA"
                         }
                         onViewportChange={(nextViewport) => setViewport(nextViewport)}
-
                     >
                         <Marker
                             key="Unique"
@@ -75,7 +77,6 @@ function Contact() {
                             </svg>
                         </Marker> </ReactMapGL>
                 </div>
-                <Forms />
                 <div className="contactusinfo mocial">
                     <h1>Contact US</h1>
                     <ul>

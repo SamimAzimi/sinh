@@ -10,17 +10,14 @@ function Rooms() {
     const [date, setDate] = useState()
     const [clicked, setClicked] = useState(false);
     useEffect(() => {
-
         axios({
             method: 'get',
             url: 'https://starhotelapi.herokuapp.com/rooms/allRooms',
-
         })
             .then(function (response) {
-
                 setRooms(response.data)
-
             });
+
     }, [])
 
 
@@ -63,7 +60,7 @@ function Rooms() {
 
                         <div class="room">
                             <div className="roomImage">
-                                <img src={`http://localhost4000/${room.imagePath}`} alt="RoomImage" />
+                                <img src={`https://starhotelapi.herokuapp.com/${room.imagePath}`} alt="RoomImage" />
                                 {/* //btoa(String.fromCharCode(new Uint8Array(room.roomImage.data.data */}
                                 {/* <img src={`data:image/png;base64,${new Buffer.from(room.roomImage.data.data).toString('base64')}`} alt="Room Image" /> */}
                             </div>
@@ -82,7 +79,12 @@ function Rooms() {
                             <button type="submit" onClick={() => handletoggle(room._id)} >Book</button>
                         </div>
                     )
-                }) : <h1>No Room Available</h1>}
+                }) : (
+                    <div className="noRoomsAvailable">
+                        <h1>No Room Available</h1>
+                        <h2>CheckOut Later Date</h2>
+                    </div>
+                )}
                 <ToastContainer />
             </div>
         </>

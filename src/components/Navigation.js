@@ -12,7 +12,7 @@ function Navigation() {
     return (
         <ul className="navigation">
             <li><NavLink to="/" activeClassName="selected"> <FontAwesomeIcon icon={faHome} /> Home</NavLink></li>
-            <li><NavLink to="/rooms" activeClassname="selected"><FontAwesomeIcon icon={faSuitcase} /> Rooms & Services</NavLink></li>
+            <li><NavLink to="/rooms" activeClassname="selected"><FontAwesomeIcon icon={faSuitcase} /> Rooms</NavLink></li>
             <li><NavLink to="/aboutus" activeClassname="selected"><FontAwesomeIcon icon={faInfoCircle} /> About Us</NavLink></li>
             <li><NavLink to="/contactus" activeClassname="selected"><FontAwesomeIcon icon={faAddressBook} /> Contact Us</NavLink></li>
         </ul>

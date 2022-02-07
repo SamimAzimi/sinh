@@ -9,6 +9,10 @@
         "adminPortalNavbar adminPortalOutLets";
 }
 
+.DesktopNav {
+    display: none;
+}
+
 .adminheadings {
     grid-area: adminheadings;
     text-align: center;
@@ -35,4 +39,37 @@
     -webkit-backdrop-filter: blur(12px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media screen and (max-width: 573px) {
+
+    .mobileNav {
+        display: none;
+    }
+
+
+    .adminPortalContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .MobileadminPortalNavbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+
+    }
+
+    .MobileadminPortalNavbar ul li {
+        line-height: 2rem;
+
+
+    }
+
+    .adminPortalOutLets {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -60,3 +60,12 @@ header h1 {
     font-size: 60px;
     color: red;
 }
+
+@media screen and (max-width: 573px) {
+
+    header h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 30px;
+        color: red;
+    }
+}
