@@ -21,7 +21,6 @@ function CustomerPortal() {
                 console.log(err)
             });
 
-
         axios.post('https://starhotelapi.herokuapp.com/rooms/bookingShow', { "userID": self._id })
             .then((response) => {
                 setbooked(response.data)
@@ -29,7 +28,9 @@ function CustomerPortal() {
             }).catch(err => {
                 console.log(err)
             })
-    }, [])
+
+
+    }, [self._id])
 
     const handleShowBooked = (e) => {
 
