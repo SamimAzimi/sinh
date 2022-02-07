@@ -16,3 +16,10 @@
     justify-content: center;
 
 }
+
+@media screen and (max-width: 573px) {
+    .allCustomerContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}

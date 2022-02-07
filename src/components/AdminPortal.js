@@ -18,7 +18,7 @@ import {
     NavLink
 } from "react-router-dom";
 function AdminPortal() {
-    const [mobNav, setMobNav] = useState(true);
+    const [mobNav, setMobNav] = useState(false);
     const handleMobileMenu = () => {
         setMobNav(!mobNav)
     }
