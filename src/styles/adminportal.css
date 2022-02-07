@@ -1,0 +1,38 @@
+.adminPortalContainer {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.1fr 1.4fr;
+    gap: 20px 20px;
+    grid-template-areas:
+        "adminheadings adminheadings"
+        "adminPortalNavbar adminPortalOutLets";
+}
+
+.adminheadings {
+    grid-area: adminheadings;
+    text-align: center;
+}
+
+.adminPortalNavbar {
+    grid-area: adminPortalNavbar;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    height: 100vh;
+    font-size: xx-large;
+
+}
+
+.adminPortalNavbar ul li a {
+    color: white;
+    line-height: 3.5rem;
+}
+
+.adminPortalOutLets {
+    grid-area: adminPortalOutLets;
+    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}

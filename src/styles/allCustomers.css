@@ -1,0 +1,18 @@
+.allCustomerContainer {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 10px 10px;
+}
+
+.allcustbtnGroup {
+    display: flex;
+}
+
+.oneCustomerContainer {
+    line-height: 3rem;
+    border: 1px solid red;
+    justify-content: center;
+
+}

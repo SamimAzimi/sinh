@@ -1,22 +1,20 @@
 import React from 'react'
+import '../styles/footer.css'
+import Logo from '../assets/logo.png'
+
 
 function Footer() {
     return (
         <footer>
-            <ul>
-                <li>+93702109223</li>
-                <li>+93782322050</li>
-                <li>+93202107138</li>
-                <li>Kabul Province Street, Near Gulbahar Center, Ramish Market</li>
-                <li>printing.press.mudasir@gmail.com</li>
-            </ul>
+            <div className="logoImageFooter">
+                <img src={Logo} alt="logo" />
+            </div>
 
-            <div>
-                Statement
-            </div>
-            <div>
-                Logo
-            </div>
+            <ul>
+                <li>+8613197771472</li>
+                <li>IceLand</li>
+                <li>star.International@gmail.com</li>
+            </ul>
         </footer>
     )
 }

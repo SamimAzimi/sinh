@@ -1,0 +1,62 @@
+.roomsContainer {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 10px 10px;
+
+}
+
+
+.roomheading {
+    text-align: center;
+}
+
+.roomImage {
+    height: 100%;
+    width: 100%;
+    border-radius: 50% 50%;
+}
+
+.roomImage>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50% 50%;
+}
+
+.BookClicked {
+    line-height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+
+}
+
+.date, .confirmbtn {
+    height: 100%;
+}
+
+.roomdescp {
+    color: Red;
+}
+
+.room {
+
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.room .roomDesc {
+
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}

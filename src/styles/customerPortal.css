@@ -1,0 +1,30 @@
+.customerBasics {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+}
+
+.hi {
+    color: red;
+}
+
+.ShowBooked {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.roomBooked {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.checkOut {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,12 @@
+.addroomsContainers, .deleteRoomContainer, .priceRoomContainer, .addCustomerContainer {
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+    margin-bottom: 2px;
+}
+
+.addroomsContainers label, .deleteRoomContainer label, .priceRoomContainer label, .addCustomerContainer label {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
