@@ -18,13 +18,13 @@ function CustomerMessage() {
 
     const handleDeleteMessage = async (e) => {
 
-        await axios.post('http://localhost:4000/messages/delMessage', { "id": e }).then(
+        await axios.post('https://starhotelapi.herokuapp.com/messages/delMessage', { "id": e }).then(
             (response) => {
                 toast.info('Customer Message has Been Deleted Succussfully')
             }
         );
 
-        axios.get('http://localhost:4000/messages/message')
+        axios.get('https://starhotelapi.herokuapp.com/messages/message')
             .then(response => {
 
                 setMessage(response.data)
@@ -34,7 +34,7 @@ function CustomerMessage() {
 
     }
     useEffect(() => {
-        axios.get('http://localhost:4000/messages/message')
+        axios.get('https://starhotelapi.herokuapp.com/messages/message')
             .then(response => {
 
                 setMessage(response.data)

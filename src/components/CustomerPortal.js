@@ -7,7 +7,7 @@ function CustomerPortal() {
     const [self, setSelf] = useState({});
     const [booked, setbooked] = useState()
     useEffect(() => {
-        axios.get('http://localhost:4000/users/CustomerRequestDetails', {
+        axios.get('https://starhotelapi.herokuapp.com/users/CustomerRequestDetails', {
             headers: {
                 'Authorization': localStorage.getItem('Authorization')
             }
@@ -22,7 +22,7 @@ function CustomerPortal() {
             });
 
 
-        axios.post('http://localhost:4000/rooms/bookingShow', { "userID": self._id })
+        axios.post('https://starhotelapi.herokuapp.com/rooms/bookingShow', { "userID": self._id })
             .then((response) => {
                 setbooked(response.data)
                 console.log(response.data)
@@ -40,7 +40,7 @@ function CustomerPortal() {
         if (date && booked._id) {
 
 
-            axios.post('http://localhost:4000/rooms/checkOut',
+            axios.post('https://starhotelapi.herokuapp.com/rooms/checkOut',
                 {
                     "userID": self._id,
                     "roomID": booked.room,

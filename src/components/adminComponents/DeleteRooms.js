@@ -16,7 +16,7 @@ function DeleteRooms() {
         e.preventDefault();
         if (delRoom.roomNo) {
 
-            await axios.post('http://localhost:4000/rooms/deleteRoom', { "roomNo": delRoom.roomNo })
+            await axios.post('https://starhotelapi.herokuapp.com/rooms/deleteRoom', { "roomNo": delRoom.roomNo })
                 .then(function (response) {
 
                     toast.info(response.data)

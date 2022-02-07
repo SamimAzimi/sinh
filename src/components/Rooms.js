@@ -13,7 +13,7 @@ function Rooms() {
 
         axios({
             method: 'get',
-            url: 'http://localhost:4000/rooms/allRooms',
+            url: 'https://starhotelapi.herokuapp.com/rooms/allRooms',
 
         })
             .then(function (response) {
@@ -30,7 +30,7 @@ function Rooms() {
             navigate('/login')
         } else {
 
-            axios.post('http://localhost:4000/rooms/booking',
+            axios.post('https://starhotelapi.herokuapp.com/rooms/booking',
                 {
                     "userID": localStorage.getItem('userID'),
                     "roomID": e,

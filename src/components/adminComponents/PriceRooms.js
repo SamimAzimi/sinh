@@ -16,7 +16,7 @@ function PriceRooms() {
     const handlePricesubmit = async (e) => {
         e.preventDefault();
         if (priceRoom.roomNo && priceRoom.roomPrice) {
-            await axios.post('http://localhost:4000/rooms/updateprice', {
+            await axios.post('https://starhotelapi.herokuapp.com/rooms/updateprice', {
                 "roomNo": priceRoom.roomNo,
                 "roomPrice": priceRoom.roomPrice,
             })

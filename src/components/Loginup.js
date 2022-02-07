@@ -28,7 +28,7 @@ function Loginup({ updateCustomerLoggedIn, updateAdminLoggedIn }) {
         e.preventDefault();
         if (customer.username && customer.password && customer.creditCard && customer.phoneNumber) {
 
-            await axios.post('http://localhost:4000/users/register', {
+            await axios.post('https://starhotelapi.herokuapp.com/users/register', {
                 "username": customer.username,
                 "creditCard": customer.creditCard, "password": customer.password, "phoneNumber": customer.phoneNumber
             })
@@ -54,7 +54,7 @@ function Loginup({ updateCustomerLoggedIn, updateAdminLoggedIn }) {
     const handleLogin = async (e) => {
         e.preventDefault();
         if (user.phoneNumber && user.password) {
-            await axios.post('http://localhost:4000/users/login', {
+            await axios.post('https://starhotelapi.herokuapp.com/users/login', {
                 "phoneNumber": user.phoneNumber,
                 "password": user.password
             }).then(

@@ -7,7 +7,7 @@ function Customers() {
     const [allCustomer, setallCustomer] = useState();
 
     useEffect(() => {
-        axios.get('http://localhost:4000/users/customers')
+        axios.get('https://starhotelapi.herokuapp.com/users/customers')
             .then(function (response) {
 
                 setallCustomer(response.data)
@@ -19,14 +19,14 @@ function Customers() {
     }, [])
 
     const handleDelete = async (e) => {
-        await axios.post('http://localhost:4000/users/delOneCustomer', { "id": e }).then(
+        await axios.post('https://starhotelapi.herokuapp.com/users/delOneCustomer', { "id": e }).then(
             (response) => {
 
                 toast.info('Customer Message has Been Deleted Succussfully')
             }
 
         );
-        await axios.get('http://localhost:4000/users/customers')
+        await axios.get('https://starhotelapi.herokuapp.com/users/customers')
             .then(function (response) {
 
                 setallCustomer(response.data)

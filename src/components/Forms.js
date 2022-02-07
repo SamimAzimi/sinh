@@ -29,7 +29,7 @@ function Forms() {
         e.preventDefault();
         if (person.fname && person.email && person.subject && person.message) {
 
-            await axios.post('http://localhost:4000/messages/message', {
+            await axios.post('https://starhotelapi.herokuapp.com/messages/message', {
                 "fname": person.fname,
                 "email": person.email, "subject": person.subject, "message": person.message
             })

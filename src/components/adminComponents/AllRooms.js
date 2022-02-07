@@ -6,7 +6,7 @@ function AllRooms() {
     const [allrooms, setAllrooms] = useState();
 
     useEffect(() => {
-        axios.get('http://localhost:4000/rooms/allRooms')
+        axios.get('https://starhotelapi.herokuapp.com/rooms/allRooms')
             .then(function (response) {
                 setAllrooms(response.data)
 
@@ -15,7 +15,7 @@ function AllRooms() {
             });
     }, [])
     const handleRoomDelete = async (e) => {
-        await axios.post('http://localhost:4000/rooms/deleteRoom', { "roomNo": e })
+        await axios.post('https://starhotelapi.herokuapp.com/rooms/deleteRoom', { "roomNo": e })
             .then(function (response) {
 
                 toast.info(response.data)
@@ -24,7 +24,7 @@ function AllRooms() {
                 console.log(err)
             })
 
-        axios.get('http://localhost:4000/rooms/allRooms')
+        axios.get('https://starhotelapi.herokuapp.com/rooms/allRooms')
             .then(function (response) {
                 setAllrooms(response.data)
 

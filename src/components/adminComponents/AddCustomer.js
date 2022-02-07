@@ -19,7 +19,7 @@ function AddCustomer() {
         e.preventDefault();
         if (customer.username && customer.password && customer.creditCard && customer.phoneNumber) {
 
-            await axios.post('http://localhost:4000/users/register', {
+            await axios.post('https://starhotelapi.herokuapp.com/users/register', {
                 "username": customer.username,
                 "creditCard": customer.creditCard, "password": customer.password, "phoneNumber": customer.phoneNumber
             })

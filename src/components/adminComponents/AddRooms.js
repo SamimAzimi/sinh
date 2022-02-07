@@ -32,7 +32,7 @@ function AddRooms() {
             form.append('roomType', room.roomType);
             form.append('roomDescription', room.roomDescription);
             form.append('roomPrice', room.roomPrice);
-            await axios.post('http://localhost:4000/rooms/addRooms', form)
+            await axios.post('https://starhotelapi.herokuapp.com/rooms/addRooms', form)
                 .then(function (response) {
                     console.log(response.data)
                     toast.info(response.data)
