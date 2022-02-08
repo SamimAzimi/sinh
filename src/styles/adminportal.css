@@ -9,6 +9,15 @@
         "adminPortalNavbar adminPortalOutLets";
 }
 
+.countRecords {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 50% 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+}
+
 .DesktopNav {
     display: none;
 }
@@ -22,6 +31,7 @@
     grid-area: adminPortalNavbar;
     background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
     height: 100vh;
+    /* width: 300px; */
     font-size: xx-large;
 
 }
@@ -31,6 +41,8 @@
     line-height: 3.5rem;
 }
 
+
+
 .adminPortalOutLets {
     grid-area: adminPortalOutLets;
     background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
@@ -38,6 +50,14 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.countRecords {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 50% 50%;
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 

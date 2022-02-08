@@ -1,5 +1,5 @@
 import './styles/root.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from './components/Navigation.js'
 import Header from './components/Header.js'
 import "react-toastify/dist/ReactToastify.css";
@@ -33,6 +33,14 @@ import CustomerRoutes from './components/Private/CustomerPrivateRoutes.js'
 function App() {
   const [isCustomerLoggedIn, setIsCustomerLoggedIn] = useState();
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState();
+
+  useEffect(() => {
+    if (localStorage.getItem('userID') && localStorage.getItem('Authorization')) {
+      setIsCustomerLoggedIn(true)
+    } else {
+      setIsCustomerLoggedIn(false)
+    }
+  }, [])
   return (
     <>
       <Header updateCustomerLoggedIn={setIsCustomerLoggedIn} updateAdminLoggedIn={setIsAdminLoggedIn} />

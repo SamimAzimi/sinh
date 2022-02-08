@@ -22,25 +22,33 @@ function Rooms() {
 
 
     const handleBook = (e) => {
-        console.log(e)
+
         if (!localStorage.getItem('userID')) {
             navigate('/login')
         } else {
 
-            axios.post('https://starhotelapi.herokuapp.com/rooms/booking',
-                {
-                    "userID": localStorage.getItem('userID'),
-                    "roomID": e,
-                    "fromBookedDate": date,
-                })
-                .then(function (response) {
-                    toast.info('your booked the room successfully')
 
-                }).catch(err => {
-                    console.log(err)
-                });
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date + ' ' + time;
+            if (date && date <= dateTime) {
+                axios.post('https://starhotelapi.herokuapp.com/rooms/booking',
+                    {
+                        "userID": localStorage.getItem('userID'),
+                        "roomID": e,
+                        "fromBookedDate": date,
+                    })
+                    .then(function (response) {
+                        toast.info('your booked the room successfully')
 
-            navigate('/customerPortal')
+                    }).catch(err => {
+                        console.log(err)
+                    });
+
+                navigate('/customerPortal')
+            } else { toast.info('Please Select a today or upcomming date') }
+
         }
     }
 
